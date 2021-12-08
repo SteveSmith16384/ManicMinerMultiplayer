@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 256.711, 8.20306 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/main_floor.png-5be409dfc8899f38b82083de17e18c55.stex"
+
+[node name="Floor" type="StaticBody2D" groups=[
+"floors",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 258.36, 372.57 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 255.956, 373.421 )
+texture = SubResource( 2 )
