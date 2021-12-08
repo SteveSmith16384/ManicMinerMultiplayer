@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/mm_left.png" type="Texture" id=4]
 [ext_resource path="res://SetColourFromSide.tscn" type="PackedScene" id=6]
 
-[sub_resource type="CapsuleShape2D" id=1]
-height = 24.0099
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 7.42857, 15.4556 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "Run_Left"
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 3 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -38,7 +38,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 1, 2, 3 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -62,28 +62,29 @@ format = 1
 script = ExtResource( 2 )
 
 [node name="WalkingLeftSprites" type="Sprite" parent="."]
-position = Vector2( 6.24334, -10.446 )
+position = Vector2( 11.7555, -10.6035 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 offset = Vector2( -4, 0 )
 hframes = 4
-frame = 1
+region_rect = Rect2( 0, 0, 18, 0 )
 
 [node name="SetColourFromSide" parent="WalkingLeftSprites" instance=ExtResource( 6 )]
 
 [node name="WalkingRightSprites" type="Sprite" parent="."]
-position = Vector2( 6.24334, -10.446 )
+visible = false
+position = Vector2( 7.18828, -10.6035 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 offset = Vector2( -4, 0 )
 hframes = 4
-frame = 1
+frame = 3
 
 [node name="SetColourFromSide" parent="WalkingRightSprites" instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.57017, -10.0598 )
-shape = SubResource( 1 )
+position = Vector2( -2.94809, -10.0139 )
+shape = SubResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Run_Left = SubResource( 4 )
@@ -92,7 +93,7 @@ anims/Run_Right = SubResource( 5 )
 [node name="FloorArea2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorArea2D"]
-position = Vector2( -1.47925, 13.0813 )
+position = Vector2( -2.53037, 6.9848 )
 shape = SubResource( 6 )
 
 [node name="InvincibleTimer" type="Timer" parent="."]

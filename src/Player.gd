@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 #const MAX_SPEED_WALK_X = 5000/50
-const SPEED = 150
+const SPEED = 100
 #const MAX_SPEED_Y = 200
 const GRAVITY = 5#4#0
-const JUMP_FORCE = 170#60#50
+const JUMP_FORCE = 150#60#50
 
 onready var main = get_tree().get_root().get_node("World")
 
