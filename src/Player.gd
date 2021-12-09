@@ -1,8 +1,6 @@
 extends KinematicBody2D
 
-#const MAX_SPEED_WALK_X = 5000/50
-const SPEED = 100
-#const MAX_SPEED_Y = 200
+const SPEED = 800
 const GRAVITY = 5#4#0
 const JUMP_FORCE = 150#60#50
 
@@ -19,7 +17,7 @@ var alive = true
 var side : int
 var is_on_floor = false
 var score : int = 0
-var lives : int = 1
+var lives : int = 3
 var out_of_game = false
 
 func _ready():
@@ -112,7 +110,6 @@ func die():
 	$AudioStreamPlayer_Died.play()
 	self.position = Vector2(-1000, -1000)
 	alive = false
-	main.show_explosion(self)
 	if lives >= 0:
 		$RespawnTimer.start()
 	else:
