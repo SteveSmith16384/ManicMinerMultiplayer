@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/graphics/central_cavern.png" type="Texture" id=1]
+[ext_resource path="res://DroppingFloor.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 243.115, 10 )
@@ -8,8 +9,29 @@ extents = Vector2( 243.115, 10 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.29851, 139.475 )
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 23.7873, 7.42088 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7.65298, 8.2367 )
+
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 120.039, 4.57352 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 23.506, 4.847 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 16.0477, 5.52687 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 31.8474, 6.77965 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 63.1494, 6.07869 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 8.13189, 6.04883 )
 
 [node name="CentralCavern" type="Node2D"]
 
@@ -31,7 +53,119 @@ shape = SubResource( 2 )
 position = Vector2( 248.291, 4.34559 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D_OneWay" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 40.0287, -0.671738 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 88.2628, 63.3693 )
+shape = SubResource( 5 )
+
+[node name="Area2D_Deadly" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( 87.5645, 0.944939 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( 7.38487, -129.61 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( -72.1278, -130.501 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( -56.7611, 64.6442 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( 118.904, -63.3165 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D_Deadly"]
+position = Vector2( 182.885, -63.8777 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D_OneWay" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D_OneWay" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
 position = Vector2( -56.1597, 76.4096 )
 shape = SubResource( 3 )
 one_way_collision = true
+
+[node name="CollisionShape2D_OneWay2" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( -152.037, -51.2703 )
+shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( 215.578, 60.963 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( -215.623, -19.1983 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( 224.048, 29.5647 )
+shape = SubResource( 7 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( -208.111, 14.8651 )
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( 175.013, -50.4192 )
+shape = SubResource( 9 )
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D_OneWay"]
+position = Vector2( 39.9047, -50 )
+shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="DroppingFloors" type="Node2D" parent="."]
+
+[node name="DroppingFloor" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 120, 64 )
+
+[node name="DroppingFloor2" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 136, 64 )
+
+[node name="DroppingFloor3" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 152, 64 )
+
+[node name="DroppingFloor4" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 168, 64 )
+
+[node name="DroppingFloor5" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 184, 64 )
+
+[node name="DroppingFloor6" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( -24, -48 )
+
+[node name="DroppingFloor7" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( -8, -48 )
+
+[node name="DroppingFloor8" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 8, -48 )
+
+[node name="DroppingFloor9" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 24, -48 )
+
+[node name="DroppingFloor10" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 56, -48 )
+
+[node name="DroppingFloor11" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 72, -48 )
+
+[node name="DroppingFloor12" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 88, -48 )
+
+[node name="DroppingFloor13" parent="DroppingFloors" instance=ExtResource( 2 )]
+position = Vector2( 104, -48 )
