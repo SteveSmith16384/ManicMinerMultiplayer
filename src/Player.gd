@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 800
+const SPEED = 80
 const GRAVITY = 5#4#0
 const JUMP_FORCE = 150#60#50
 
@@ -19,6 +19,7 @@ var is_on_floor = false
 var score : int = 0
 var lives : int = 3
 var out_of_game = false
+var on_conveyor = false
 
 func _ready():
 	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
@@ -47,11 +48,13 @@ func _physics_process(_delta):
 			motion.y -= JUMP_FORCE
 		
 	motion.x = 0
+	if on_conveyor:
+		motion.x -= 50
 	if Input.is_action_pressed("move_right" + str(side)):
-		motion.x = SPEED
+		motion.x += SPEED
 		animationPlayer.play("Run_Right")
 	elif Input.is_action_pressed("move_left" + str(side)):
-		motion.x = -SPEED
+		motion.x -= SPEED
 		animationPlayer.play("Run_Left")
 	else:
 		animationPlayer.stop(false)
@@ -134,3 +137,16 @@ func inc_score(amt):
 	pass
 	
 	
+
+
+func _on_FloorArea2D_area_entered(area):
+	if area.is_in_group("conveyors"):
+		on_conveyor = true
+	pass
+
+
+func _on_FloorArea2D_area_exited(area):
+	if area.is_in_group("conveyors"):
+		on_conveyor = false
+	pass
+

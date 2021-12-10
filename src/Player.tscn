@@ -83,7 +83,7 @@ frame = 3
 [node name="SetColourFromSide" parent="WalkingRightSprites" instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.94809, -10.0139 )
+position = Vector2( -2.94809, -10.3289 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -116,6 +116,8 @@ stream = SubResource( 6 )
 [node name="AudioStreamPlayer_Landed" type="AudioStreamPlayer" parent="."]
 stream = SubResource( 7 )
 
+[connection signal="area_entered" from="FloorArea2D" to="." method="_on_FloorArea2D_area_entered"]
+[connection signal="area_exited" from="FloorArea2D" to="." method="_on_FloorArea2D_area_exited"]
 [connection signal="body_entered" from="FloorArea2D" to="." method="_on_FloorArea2D_body_entered"]
 [connection signal="body_exited" from="FloorArea2D" to="." method="_on_FloorArea2D_body_exited"]
 [connection signal="timeout" from="InvincibleTimer" to="." method="_on_InvincibleTimer_timeout"]

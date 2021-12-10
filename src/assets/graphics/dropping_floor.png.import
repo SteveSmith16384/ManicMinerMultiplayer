@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/single_floor.png-fed8bfd05c731351cc736405b14eb401.stex"
+path="res://.import/dropping_floor.png-2d890e000583e9e5797dff6dd3c6e3bb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/single_floor.png"
-dest_files=[ "res://.import/single_floor.png-fed8bfd05c731351cc736405b14eb401.stex" ]
+source_file="res://assets/graphics/dropping_floor.png"
+dest_files=[ "res://.import/dropping_floor.png-2d890e000583e9e5797dff6dd3c6e3bb.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
