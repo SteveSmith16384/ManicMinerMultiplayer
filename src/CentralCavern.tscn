@@ -203,8 +203,16 @@ position = Vector2( 104, -48 )
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( -57.2456, -7.85724 )
+LeftPos = NodePath("../Robot_;Left_Pos")
+RightPos = NodePath("../Robot_;Right_Pos")
 
 [node name="ConveyorBelt" parent="." instance=ExtResource( 5 )]
 position = Vector2( 0.353561, 3.18198 )
+
+[node name="Robot_;Left_Pos" type="Position2D" parent="."]
+position = Vector2( -121.486, -0.513493 )
+
+[node name="Robot_;Right_Pos" type="Position2D" parent="."]
+position = Vector2( 6.54063, -1.2973 )
 
 [connection signal="body_entered" from="Area2D_Deadly" to="." method="_on_Area2D_Deadly_body_entered"]

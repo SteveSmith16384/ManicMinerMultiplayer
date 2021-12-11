@@ -26,6 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "Walk_Right"
+length = 0.4
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YellowRobot_Right:frame")
@@ -40,7 +41,9 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=[
+"kills_player",
+]]
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

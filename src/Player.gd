@@ -74,14 +74,9 @@ func _physics_process(_delta):
 	var c = get_slide_count()
 	for i in range (c):
 		var coll = get_slide_collision(i)
-		if coll.collider.is_in_group("players"):
-			var enemy = coll.collider
-			if enemy.alive:
-				if enemy.position.y < position.y:
-					self.die()
-				else:
-					enemy.die()
-					
+		if coll.collider.is_in_group("kills_player"):
+			#var enemy = coll.collider
+			self.die()
 	pass
 
 
