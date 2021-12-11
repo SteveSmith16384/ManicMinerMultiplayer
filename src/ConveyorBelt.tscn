@@ -10,6 +10,3 @@ extents = Vector2( 158.891, 1.10236 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 32.3559, 6.56639 )
 shape = SubResource( 1 )
-
-[connection signal="body_entered" from="." to="." method="_on_ConveyorBelt_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_ConveyorBelt_body_exited"]

@@ -7,7 +7,7 @@
 extents = Vector2( 7.92798, 8.05086 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 5.13111, 0.36887 )
+extents = Vector2( 7.40459, 0.36887 )
 
 [node name="DroppingFloor" type="StaticBody2D"]
 script = ExtResource( 2 )
@@ -27,3 +27,4 @@ position = Vector2( 0.0344238, -8.61746 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_entered"]
+[connection signal="body_exited" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_exited"]
