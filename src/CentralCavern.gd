@@ -6,3 +6,8 @@ func _on_Area2D_Deadly_body_entered(body):
 		body.die();
 	pass
 
+
+func show_toaster():
+	$Toaster/Toaster_Flashing.show()
+	pass
+	

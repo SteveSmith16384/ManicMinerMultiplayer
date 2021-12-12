@@ -5,6 +5,7 @@ const collectable_class = preload("res://Collectable.tscn")
 
 var game_over = false
 var winner : int
+var keys = 5
 
 func _ready():
 	for side in range(0, 4):
@@ -81,5 +82,12 @@ func check_for_winner():
 	
 	if players_left == 1:
 		show_winner(side_left)
+	pass
+	
+
+func key_collected():
+	keys -= 1
+	if keys <= 0:
+		$CentralCavern.show_toaster()
 	pass
 	

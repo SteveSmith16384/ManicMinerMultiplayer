@@ -28,10 +28,10 @@ func _ready():
 	
 	
 func _process(_delta):
-	if invincible:
-		self.visible = not self.visible
-	else:
-		self.visible = true
+#	if invincible:
+#		self.visible = not self.visible
+#	else:
+#		self.visible = true
 	pass
 	
 	
