@@ -4,7 +4,7 @@ var start_y : int
 var bodies = []
 var time_to_raise : float
 
-const SPEED : int = 50
+const SPEED : int = 25
 
 func _ready():
 	start_y = self.position.y
@@ -25,12 +25,24 @@ func _process(delta):
 	
 	
 func _on_Area2D_Dropping_body_entered(body):
-	if body.is_in_group("players"):
-		bodies.push_back(body)
+#	if body.is_in_group("players"):
+#		bodies.push_back(body)
 	pass
 
 
 func _on_Area2D_Dropping_body_exited(body):
-	if body.is_in_group("players"):
-		bodies.remove(bodies.find(body))
+#	if body.is_in_group("players"):
+#		bodies.remove(bodies.find(body))
 	pass
+
+
+func _on_Area2D_Dropping_area_entered(area):
+	if area.is_in_group("feet"):
+		bodies.push_back(area)
+	pass # Replace with function body.
+
+
+func _on_Area2D_Dropping_area_exited(area):
+	if area.is_in_group("feet"):
+		bodies.remove(bodies.find(area))
+	pass # Replace with function body.

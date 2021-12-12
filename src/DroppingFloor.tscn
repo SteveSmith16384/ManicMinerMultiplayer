@@ -7,7 +7,7 @@
 extents = Vector2( 7.92798, 8.05086 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7.40459, 0.36887 )
+extents = Vector2( 7.40459, 2.08671 )
 
 [node name="DroppingFloor" type="StaticBody2D"]
 script = ExtResource( 2 )
@@ -23,8 +23,10 @@ one_way_collision = true
 [node name="Area2D_Dropping" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Dropping"]
-position = Vector2( 0.0344238, -8.61746 )
+position = Vector2( -0.0490036, -7.95004 )
 shape = SubResource( 2 )
 
+[connection signal="area_entered" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_area_entered"]
+[connection signal="area_exited" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_area_exited"]
 [connection signal="body_entered" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_entered"]
 [connection signal="body_exited" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_exited"]
