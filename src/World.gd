@@ -15,6 +15,7 @@ func _ready():
 	for side in Globals.player_nums: # range(0, 4):# todo - re-add 
 		var player = player_class.instance()
 		player.side = side
+		#player.set_collision_mask_bit(side, 1)
 		player.name = "Player_" + str(side)
 		set_player_start_pos(player)
 		add_child(player)

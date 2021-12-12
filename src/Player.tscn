@@ -59,6 +59,7 @@ format = 1
 [node name="Player" type="KinematicBody2D" groups=[
 "players",
 ]]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="WalkingLeftSprites" type="Sprite" parent="."]
