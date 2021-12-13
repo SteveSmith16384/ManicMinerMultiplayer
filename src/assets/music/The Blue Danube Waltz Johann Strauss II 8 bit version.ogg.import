@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The Blue Danube Waltz Johann Strauss II 8 bit version.ogg-180f1c28b7ad65ec3f5301c75c057b45.oggstr"
+
+[deps]
+
+source_file="res://assets/music/The Blue Danube Waltz Johann Strauss II 8 bit version.ogg"
+dest_files=[ "res://.import/The Blue Danube Waltz Johann Strauss II 8 bit version.ogg-180f1c28b7ad65ec3f5301c75c057b45.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

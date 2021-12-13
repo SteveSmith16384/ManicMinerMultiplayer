@@ -22,7 +22,7 @@ var out_of_game = false
 var on_conveyor = false
 
 func _ready():
-	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
+#	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
 	main.update_score(side, score, lives)
 	pass
 	
@@ -45,6 +45,7 @@ func _physics_process(_delta):
 	motion.y += GRAVITY
 	if Input.is_action_pressed("jump"+str(side)):
 		if is_on_floor():
+			$AudioStreamPlayer_Jump.play()
 			motion.y -= JUMP_FORCE
 		
 	motion.x = 0
@@ -81,17 +82,17 @@ func _physics_process(_delta):
 
 
 func _on_FloorArea2D_body_entered(body):
-	if body.is_in_group("floors"):
-		is_on_floor = true
-		$AudioStreamPlayer_Landed.play()
+#	if body.is_in_group("floors"):
+#		is_on_floor = trued
+#		$AudioStreamPlayer_Landed.play()
 	pass
 
 
 func _on_FloorArea2D_body_exited(body):
-	if body.is_in_group("floors"):
-		is_on_floor = false
-		main.show_explosion(self)
-		$AudioStreamPlayer_Jump.play()
+#	if body.is_in_group("floors"):
+#		is_on_floor = false
+#		main.show_explosion(self)
+#		$AudioStreamPlayer_Jump.play()
 	pass
 
 
