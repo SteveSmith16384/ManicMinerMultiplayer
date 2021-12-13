@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Beethoven 5th Symphony Part 1 8 Bits version.ogg-4f753c3c2e093b25ef580b3012e999a3.oggstr"
+
+[deps]
+
+source_file="res://assets/music/Beethoven 5th Symphony Part 1 8 Bits version.ogg"
+dest_files=[ "res://.import/Beethoven 5th Symphony Part 1 8 Bits version.ogg-4f753c3c2e093b25ef580b3012e999a3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -5,7 +5,7 @@ const collectable_class = preload("res://Collectable.tscn")
 
 var game_over = false
 var winner : int
-var keys = 5
+var keys = 0
 
 func _ready():
 	for side in range(0, 4):

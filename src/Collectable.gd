@@ -1,5 +1,11 @@
 extends Area2D
 
+func _ready():
+	var main = get_tree().get_root().get_node("World")
+	main.keys =+ 1
+	pass
+	
+	
 func _on_Collectable_body_entered(body):
 	if body.is_in_group("players"):
 		$AudioStreamPlayer_Collected.play()
