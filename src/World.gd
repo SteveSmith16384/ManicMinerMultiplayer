@@ -2,6 +2,7 @@ extends Node2D
 
 const player_class = preload("res://Player.tscn")
 const collectable_class = preload("res://Collectable.tscn")
+const flying_key_class = preload("res://FlyingKey.tscn")
 
 var game_over = false
 var winner : int
@@ -70,5 +71,10 @@ func key_collected(player):
 	$AudioStreamPlayer_Collected.play()
 	if player.keys_collected >= total_keys:
 		$CentralCavern.show_toaster()
+	
+	var fly = self.flying_key_class.instance()
+	fly.start_pos = player.position
+	fly.end_pos = Vector2()
+	self.add_child(fly)	
 	pass
 	
