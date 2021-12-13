@@ -18,5 +18,6 @@ func _on_Toaster_body_entered(body):
 		
 	if body.is_in_group("players"):
 		var main = get_tree().get_root().get_node("World")
-		main.show_winner(body.side)
+		if body.keys_collected >= main.total_keys:
+			main.show_winner(body.side)
 	pass

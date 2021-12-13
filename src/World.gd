@@ -5,7 +5,7 @@ const collectable_class = preload("res://Collectable.tscn")
 
 var game_over = false
 var winner : int
-var keys = 0
+var total_keys = 0
 
 func _ready():
 	for side in range(0, 4):
@@ -60,34 +60,14 @@ func show_winner(side):
 	pass
 	
 
-func update_score(side, score, lives):
+func update_score(side, score):
 	var node = find_node("Score_" + str(side))
-	if lives >= 0:
-		node.text = "SCORE:" + str(score) + "\nLIVES:" + str(lives)
-	else:
-		node.text = "SCORE:" + str(score)
+	node.text = "SCORE:" + str(score)
 	pass
 	
 
-func check_for_winner():
-	var players_left = 0
-	var side_left = -1
-	var children = self.get_children()
-	for side in Globals.player_nums: # range(0, 4):# todo - re-add 
-		var player = get_node("Player_" + str(side))
-		if player:
-			if player.out_of_game == false:
-				players_left += 1
-				side_left = side
-	
-	if players_left == 1:
-		show_winner(side_left)
-	pass
-	
-
-func key_collected():
-	keys -= 1
-	if keys <= 0:
+func key_collected(player):
+	if player.keys_collected >= total_keys:
 		$CentralCavern.show_toaster()
 	pass
 	

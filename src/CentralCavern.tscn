@@ -226,6 +226,9 @@ position = Vector2( -232, -128 )
 [node name="Collectable7" parent="Collectables" instance=ExtResource( 4 )]
 position = Vector2( -232, 56 )
 
+[node name="Collectable15" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( -88, 32 )
+
 [node name="Collectable8" parent="Collectables" instance=ExtResource( 4 )]
 position = Vector2( 232, 72 )
 

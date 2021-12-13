@@ -17,13 +17,14 @@ var alive = true
 var side : int
 var is_on_floor = false
 var score : int = 0
-var lives : int = 3
-var out_of_game = false
+#var lives : int = 3
+#var out_of_game = false
 var on_conveyor = false
+var keys_collected : int = 0
 
 func _ready():
 #	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
-	main.update_score(side, score, lives)
+	main.update_score(side, score)
 	pass
 	
 	
@@ -105,16 +106,11 @@ func die():
 	if invincible:
 		return
 		
-	lives -= 1
 	$AudioStreamPlayer_Died.play()
 	self.position = Vector2(-1000, -1000)
 	alive = false
-	if lives >= 0:
-		$RespawnTimer.start()
-	else:
-		out_of_game = true
-		main.check_for_winner()
-	main.update_score(side, score, lives)
+	$RespawnTimer.start()
+	main.update_score(side, score)
 	pass
 	
 
@@ -129,7 +125,7 @@ func _on_RespawnTimer_timeout():
 
 func inc_score(amt):
 	score += amt
-	main.update_score(side, score, lives)
+	main.update_score(side, score)
 	pass
 	
 	

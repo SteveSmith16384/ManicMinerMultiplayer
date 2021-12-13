@@ -1,18 +1,26 @@
 extends Area2D
 
+var collected_by = []
+
 func _ready():
 	var main = get_tree().get_root().get_node("World")
-	main.keys =+ 1
+	main.total_keys += 1
 	pass
 	
 	
 func _on_Collectable_body_entered(body):
 	if body.is_in_group("players"):
+		if collected_by.find(body) >= 0:
+			return # Already collected
+			
+		collected_by.push_back(body)
 		$AudioStreamPlayer_Collected.play()
+		body.keys_collected += 1
 		body.inc_score(Globals.PTS_FOR_DIAMOND)
 
 		var main = get_tree().get_root().get_node("World")
-		main.key_collected()
+		main.key_collected(body)
 		
-		self.queue_free()
+		if collected_by.size() >= Globals.player_nums.size():
+			self.queue_free()
 	pass
