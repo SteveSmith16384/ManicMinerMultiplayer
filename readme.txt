@@ -6,7 +6,7 @@ Programmed by Stephen Smith (stephen.carlylesmith@googlemail.com).  Twitter: @st
 
 Gameplay Video:
 
-If you have any comments or suggestions for this game, don't hesitate to get in contact!
+If you have any comments or suggestions for this game, please don't hesitate to get in contact!
 
 
 ## Instructions
