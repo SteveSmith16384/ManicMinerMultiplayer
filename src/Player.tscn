@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/sfx/sfx_movement_jump16_landing.wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.42857, 15.4556 )
+extents = Vector2( 5.51287, 15.4556 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Run_Left"
@@ -45,7 +45,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8.00394, 2.14932 )
+extents = Vector2( 5.56762, 2.14932 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "players",

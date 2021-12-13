@@ -67,6 +67,7 @@ func update_score(side, score):
 	
 
 func key_collected(player):
+	$AudioStreamPlayer_Collected.play()
 	if player.keys_collected >= total_keys:
 		$CentralCavern.show_toaster()
 	pass

@@ -29,10 +29,10 @@ func _ready():
 	
 	
 func _process(_delta):
-#	if invincible:
-#		self.visible = not self.visible
-#	else:
-#		self.visible = true
+	if keys_collected >= main.total_keys:
+		self.visible = not self.visible
+	else:
+		self.visible = true
 	pass
 	
 	
@@ -128,8 +128,6 @@ func inc_score(amt):
 	main.update_score(side, score)
 	pass
 	
-	
-
 
 func _on_FloorArea2D_area_entered(area):
 	if area.is_in_group("conveyors"):
