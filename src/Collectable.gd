@@ -1,3 +1,4 @@
+class_name Collectable
 extends Area2D
 
 var collected_by = []
@@ -22,7 +23,7 @@ func _on_Collectable_body_entered(body):
 		body.inc_score(Globals.PTS_FOR_DIAMOND)
 
 		var main = get_tree().get_root().get_node("World")
-		main.key_collected(body)
+		main.key_collected(body, self)
 		
 		if collected_by.size() >= Globals.player_nums.size():
 			self.queue_free()

@@ -1,6 +1,6 @@
 # MANIC MINER MULTIPLAYER
 
-A multiplayer version of the classic game Manic Miner, originally written by Matthew Smith and published by Bug-Byte/Software Projects.
+A multiplayer party version of the classic game Manic Miner, originally written by Matthew Smith and published by Bug-Byte & Software Projects.
 
 Programmed by Stephen Smith (stephen.carlylesmith@googlemail.com).  Twitter: @stephencsmith
 

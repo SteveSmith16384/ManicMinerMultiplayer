@@ -1,8 +1,9 @@
+class_name Player
 extends KinematicBody2D
 
 const SPEED = 80
-const GRAVITY = 5#4#0
-const JUMP_FORCE = 150#60#50
+const GRAVITY = 5
+const JUMP_FORCE = 150
 
 onready var main = get_tree().get_root().get_node("World")
 
@@ -17,13 +18,10 @@ var alive = true
 var side : int
 var is_on_floor = false
 var score : int = 0
-#var lives : int = 3
-#var out_of_game = false
 var on_conveyor = false
 var keys_collected : int = 0
 
 func _ready():
-#	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
 	main.update_score(self)
 	pass
 	
@@ -77,23 +75,7 @@ func _physics_process(_delta):
 	for i in range (c):
 		var coll = get_slide_collision(i)
 		if coll.collider.is_in_group("kills_player"):
-			#var enemy = coll.collider
 			self.die()
-	pass
-
-
-func _on_FloorArea2D_body_entered(body):
-#	if body.is_in_group("floors"):
-#		is_on_floor = trued
-#		$AudioStreamPlayer_Landed.play()
-	pass
-
-
-func _on_FloorArea2D_body_exited(body):
-#	if body.is_in_group("floors"):
-#		is_on_floor = false
-#		main.show_explosion(self)
-#		$AudioStreamPlayer_Jump.play()
 	pass
 
 

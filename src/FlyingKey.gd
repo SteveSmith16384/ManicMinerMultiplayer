@@ -1,7 +1,7 @@
 extends Sprite
 
 var start_pos : Vector2
-var end_pos : Vector2
+var end_pos = Vector2(255, 0)
 var pcent : float = 0
 
 func _ready():
