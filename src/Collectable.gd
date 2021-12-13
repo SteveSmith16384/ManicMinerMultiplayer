@@ -3,12 +3,16 @@ extends Area2D
 var collected_by = []
 
 func _ready():
-	var main = get_tree().get_root().get_node("World")
-	main.total_keys += 1
+	if self.visible:
+		var main = get_tree().get_root().get_node("World")
+		main.total_keys += 1
 	pass
 	
 	
 func _on_Collectable_body_entered(body):
+	if self.visible == false:
+		return
+		
 	if body.is_in_group("players"):
 		if collected_by.find(body) >= 0:
 			return # Already collected

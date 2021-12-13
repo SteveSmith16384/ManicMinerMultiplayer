@@ -4,6 +4,7 @@
 [ext_resource path="res://Toaster.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.007, 13.7898 )
 
 [node name="Toaster" type="Area2D"]
 script = ExtResource( 2 )

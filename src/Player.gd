@@ -24,7 +24,7 @@ var keys_collected : int = 0
 
 func _ready():
 #	$AudioStreamPlayer_Pickup.stream = load("res://assets/sfx/sfx_movement_portal" + str(side+1) + ".wav")
-	main.update_score(side, score)
+	main.update_score(self)
 	pass
 	
 	
@@ -110,7 +110,7 @@ func die():
 	self.position = Vector2(-1000, -1000)
 	alive = false
 	$RespawnTimer.start()
-	main.update_score(side, score)
+	main.update_score(self)
 	pass
 	
 
@@ -125,7 +125,7 @@ func _on_RespawnTimer_timeout():
 
 func inc_score(amt):
 	score += amt
-	main.update_score(side, score)
+	main.update_score(self)
 	pass
 	
 

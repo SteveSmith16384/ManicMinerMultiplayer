@@ -207,7 +207,7 @@ position = Vector2( -121.486, -0.513493 )
 position = Vector2( 6.54063, -1.2973 )
 
 [node name="Toaster" type="Sprite" parent="."]
-position = Vector2( 224, -72 )
+position = Vector2( 224, 88 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 
@@ -227,12 +227,22 @@ position = Vector2( -232, -128 )
 position = Vector2( -232, 56 )
 
 [node name="Collectable15" parent="Collectables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -88, 32 )
 
+[node name="Collectable16" parent="Collectables" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -16, 32 )
+
+[node name="Collectable17" parent="Collectables" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -56, 32 )
+
 [node name="Collectable8" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 232, 72 )
+position = Vector2( 232, 40 )
 
 [node name="Collectable9" parent="Collectables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -232, -32 )
 
 [node name="Collectable10" parent="Collectables" instance=ExtResource( 4 )]
@@ -242,6 +252,7 @@ position = Vector2( -232, 0 )
 position = Vector2( 72, 80 )
 
 [node name="Collectable12" parent="Collectables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -32, -128 )
 
 [node name="Collectable13" parent="Collectables" instance=ExtResource( 4 )]

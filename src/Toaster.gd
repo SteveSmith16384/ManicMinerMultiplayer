@@ -13,8 +13,8 @@ func _on_Timer_timeout():
 
 
 func _on_Toaster_body_entered(body):
-	if self.visible == false:
-		return
+#	if self.visible == false:
+#		return
 		
 	if body.is_in_group("players"):
 		var main = get_tree().get_root().get_node("World")

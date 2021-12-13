@@ -24,7 +24,7 @@ func _ready():
 		score.visible = true
 		pass
 		
-	Globals.enemy_type = Globals.rnd.randi_range(0, 1)
+	print("Num keys:" + str(self.total_keys))
 	pass
 
 
@@ -60,9 +60,9 @@ func show_winner(side):
 	pass
 	
 
-func update_score(side, score):
-	var node = find_node("Score_" + str(side))
-	node.text = "SCORE:" + str(score)
+func update_score(player):
+	var node = find_node("Score_" + str(player.side))
+	node.text = "SCORE:" + str(player.score) + "\nKEYS:" + str(player.keys_collected)
 	pass
 	
 
