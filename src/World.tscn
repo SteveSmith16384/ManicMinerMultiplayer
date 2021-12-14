@@ -122,7 +122,7 @@ __meta__ = {
 margin_right = 47.0
 margin_bottom = 35.0
 custom_fonts/font = ExtResource( 12 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SCORE:0
 LIVES:3"
 
