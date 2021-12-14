@@ -76,7 +76,7 @@ margin_top = 294.314
 margin_right = 393.225
 margin_bottom = 365.314
 custom_fonts/font = ExtResource( 6 )
-text = "Press fire to start!"
+text = "Press jump to start!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
