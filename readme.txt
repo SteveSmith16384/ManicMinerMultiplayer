@@ -4,7 +4,7 @@ A multiplayer party version of the classic game Manic Miner, originally written 
 
 Programmed by Stephen Smith (stephen.carlylesmith@googlemail.com).  Twitter: @stephencsmith
 
-Gameplay Video: [todo]
+Gameplay Video: https://www.youtube.com/watch?v=f0tDeBsiQI8
 
 If you have any comments or suggestions for this game, please don't hesitate to get in contact!
 
