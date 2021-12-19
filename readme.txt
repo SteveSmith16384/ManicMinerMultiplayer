@@ -18,7 +18,7 @@ If you have any comments or suggestions for this game, please don't hesitate to 
 ## Controls
 * Keyboard: Either "W, A, D and Space", or "Q, O, P and Space"
 * Should work with most controllers
-* F12 - Toggle full screen
+* F11 - Toggle full screen
 * Esc - quit
 
 
@@ -32,7 +32,7 @@ Since the app is not signed for a Mac (I don't even have a Mac), it shows "Appli
 
 ## Credits
 * Original game design and graphics by Matthew Smith
-* Developed using Godot
+* Developed using Godot and GIMP
 * All sound effects taken from https://opengameart.org/content/512-sound-effects-8-bit-style
 * All music by Classical 8-bit: https://classical8bit.tumblr.com/
 * Thanks to Mikhail Sudakov for help on running the game on Macs.

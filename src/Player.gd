@@ -1,8 +1,8 @@
 class_name Player
 extends KinematicBody2D
 
-const SPEED = 70
-const GRAVITY = 5
+const SPEED = 55
+const GRAVITY = 4
 const JUMP_FORCE = 150
 
 onready var main = get_tree().get_root().get_node("World")

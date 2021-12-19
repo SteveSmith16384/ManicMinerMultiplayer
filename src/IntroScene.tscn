@@ -73,10 +73,22 @@ __meta__ = {
 [node name="Label2" type="Label" parent="CanvasLayer"]
 margin_left = 136.225
 margin_top = 294.314
-margin_right = 393.225
+margin_right = 394.225
 margin_bottom = 365.314
 custom_fonts/font = ExtResource( 6 )
 text = "Press jump to start!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 192.348
+margin_top = 336.968
+margin_right = 518.348
+margin_bottom = 407.968
+custom_fonts/font = ExtResource( 5 )
+text = "F11 to toggle Full-Screen
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }

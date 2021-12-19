@@ -1,10 +1,12 @@
 extends StaticBody2D
 
+const SPEED : int = 25
+
 var start_y : int
 var bodies = []
 var time_to_raise : float
 
-const SPEED : int = 25
+const drop_height = 16
 
 func _ready():
 	start_y = self.position.y
@@ -44,12 +46,12 @@ func adjust_body():
 		$Sprite.position.y = 0
 		return
 	
-	if $Sprite.position.y > $Sprite.texture.get_height():
-		self.position.y += $Sprite.texture.get_height()
-		$Sprite.position.y -= $Sprite.texture.get_height()
+	if $Sprite.position.y > drop_height:
+		self.position.y += drop_height
+		$Sprite.position.y -= drop_height
 	elif $Sprite.position.y < 0:
-		self.position.y -= $Sprite.texture.get_height()
-		$Sprite.position.y += $Sprite.texture.get_height()
+		self.position.y -= drop_height
+		$Sprite.position.y += drop_height
 	pass
 	
 	
