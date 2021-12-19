@@ -36,6 +36,9 @@ func set_player_start_pos(player):
 	
 	
 func _process(delta):
+	if Input.is_action_just_pressed("toggle_fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene("res://SelectPlayersScene.tscn")
 	pass

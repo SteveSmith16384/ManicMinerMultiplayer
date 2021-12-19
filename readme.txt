@@ -18,6 +18,7 @@ If you have any comments or suggestions for this game, please don't hesitate to 
 ## Controls
 * Keyboard: Either "W, A, D and Space", or "Q, O, P and Space"
 * Should work with most controllers
+* F12 - Toggle full screen
 * Esc - quit
 
 
@@ -26,7 +27,7 @@ You will probably need to mark the program as an executable before Linux will al
 
 
 ## Running on a Mac
-Since the app is not signed for a Mac (I don't even have a Mac), it shows "Application from unidentified developer" or even "Application is damaged and cannot Be opened" on first start. Try to open you game with Ctrl+Right Click and then Open. If it's not helping, open Terminal, enter "sudo xattr -cr /Path/To/JetPac.app" and then open your game.  More details here: https://support.apple.com/en-gb/guide/mac-help/mh40616/mac and here: https://appletoolbox.com/app-is-damaged-cannot-be-opened-mac/
+Since the app is not signed for a Mac (I don't even have a Mac), it shows "Application from unidentified developer" or even "Application is damaged and cannot Be opened" on first start. Try to open you game with Ctrl+Right Click and then Open. If it's not helping, open Terminal, enter "sudo xattr -cr /Path/To/MultiplayerManicMiner.app" and then open your game.  More details here: https://support.apple.com/en-gb/guide/mac-help/mh40616/mac and here: https://appletoolbox.com/app-is-damaged-cannot-be-opened-mac/
 
 
 ## Credits

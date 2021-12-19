@@ -28,5 +28,3 @@ shape = SubResource( 2 )
 
 [connection signal="area_entered" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_area_entered"]
 [connection signal="area_exited" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_area_exited"]
-[connection signal="body_entered" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_entered"]
-[connection signal="body_exited" from="Area2D_Dropping" to="." method="_on_Area2D_Dropping_body_exited"]

@@ -1,7 +1,7 @@
 class_name Player
 extends KinematicBody2D
 
-const SPEED = 80
+const SPEED = 70
 const GRAVITY = 5
 const JUMP_FORCE = 150
 
