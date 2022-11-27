@@ -15,7 +15,6 @@ func _ready():
 	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	move_and_slide(dir * 50, Vector2.UP)
 	if self.position.x < max_left.position.x:

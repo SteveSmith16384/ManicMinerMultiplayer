@@ -6,8 +6,6 @@ Programmed by Stephen Smith (stephen.carlylesmith@googlemail.com).  Twitter: @st
 
 Gameplay Video: https://www.youtube.com/watch?v=f0tDeBsiQI8
 
-If you have any comments or suggestions for this game, please don't hesitate to get in contact!
-
 
 ## Instructions
 * Up to 4 players compete to be the first to collect all the keys and get to the end of the level.
